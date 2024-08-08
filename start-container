@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# This script starts the Laravel development server with specific host and port.
+
+# Execute the Artisan serve command
+php artisan serve --host=0.0.0.0 --port=80
