@@ -25,3 +25,4 @@
 	<link href="{{url('admin/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}"  rel="stylesheet">
     <link href="{{url('admin/css/owl.css') }}"  rel="stylesheet">
     <link class="main-css" href="{{url('admin/css/style.css') }}"  rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.min.css" rel="stylesheet">

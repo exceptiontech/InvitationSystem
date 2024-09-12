@@ -219,8 +219,7 @@
 
 
                                         <h4 class="text-black">Dear <span><i class="fal fa-user-circle"></i> ..............</span></h4>
-
-                                        <p>{{ $invitation['subject'] }}.</p>
+                                        <p>{!!$invitation['subject']  !!}.</p>
 
 
                                     </div>

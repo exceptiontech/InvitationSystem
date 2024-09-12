@@ -74,10 +74,10 @@
         <div class="last-btn">
             <a href="{{ url(config('app.url_admin').'invitations') }}"  class="btn btn-primary w-100 new-Invitations"><i
                     class="fal fa-plus-circle"></i>New Invitations</a>
-            <a href="/logout2"  onclick="event.preventDefault();
+            <a href="{{ route('logout') }}"  onclick="event.preventDefault();
             document.getElementById('logout-form').submit();" title="" class="btn btn-primary w-100"><i
                     class="fal fa-arrow-right-from-bracket"></i>logout</a>
-<form id="logout-form" action="/logout2" method="POST" style="display: none;">
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
     @csrf
 </form>
 

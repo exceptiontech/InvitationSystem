@@ -417,21 +417,6 @@
 
                                 {{ request()->url() == url(config('app.url_admin').$record_p->page_url) ? $record_p->name : '' }}
                                 @endforeach  --}}
-                                @if (request()->url() == url(config('app.url_admin').'contacts/1/1') )
-                                    contacts
-                                    @elseif((request()->url() == url(config('app.url_admin').'maindashboard') ))
-                                    dashboard
-                                    @elseif((request()->url() == url(config('app.url_admin').'calender') ))
-                                    calender
-                                    @elseif((request()->url() == url(config('app.url_admin').'moderators') ))
-                                    moderators
-                                    @elseif((request()->url() == url(config('app.url_admin').'events') ))
-                                    events
-                                    @elseif((request()->url() == url(config('app.url_admin').'statistics') ))
-                                    statistics
-                                    @elseif((request()->url() == url(config('app.url_admin').'invitations') ))
-                                    invitations
-                                @endif
 
                             </div>
                         </div>
@@ -447,7 +432,7 @@
                             </li> --}}
 
 
-                            <li class="nav-item dropdown notification_dropdown">
+                            {{-- <li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link " href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                                     <i class="fal fa-bell"></i>
                                     <div class="pulse-css">4</div>
@@ -515,7 +500,7 @@
                                     <a class="all-notification" href="javascript:void(0);">See all notifications <i
                                             class="ti-arrow-right"></i></a>
                                 </div>
-                            </li>
+                            </li> --}}
 
                             {{-- <li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link bell bell-link " href="javascript:void(0);">

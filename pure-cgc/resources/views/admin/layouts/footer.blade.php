@@ -1,11 +1,14 @@
 
 <!--**********************************
     Scripts
+	
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.min.js"></script>
+	
 ***********************************-->
 
     <script src="{{url('admin/vendor/global/global.min.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.min.js"></script>
+
     <script src="{{url('admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
     <script src="{{url('admin/vendor/chart-js/chart.bundle.min.js')}}"></script>
     <script src="{{url('admin/vendor/bootstrap-datetimepicker/js/moment.js')}}"></script>
@@ -22,12 +25,15 @@
 		    <script src="{{url('admin/vendor/peity/jquery.peity.min.js')}}"></script>
 
     <script src="{{url('admin/js/dashboard/dashboard-1.js')}}"></script>
-		<script src="{{url('admin/vendor/ckeditor/ckeditor.js')}}"></script>
+
+	<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+	
     <script src="{{url('admin/js/custom.min.js')}}"></script>
     <script src="{{url('admin/js/deznav-init.js')}}"></script>
 	<script src="{{url('admin/js/owl.js')}}"></script>
     <script src="{{url('admin/js/demo.js')}}"></script>
 
+	 
 
 
 
@@ -359,6 +365,7 @@ document.onload = generateCalendar(date);
 
 
 <script>
+/*
 $('#bold').on('click', function() {
    document.execCommand('bold', false, null);
 });
@@ -415,7 +422,7 @@ $('#color').spectrum({
    }
 });
 
-$('.editor').perfectScrollbar();
+$('.editor').perfectScrollbar();*/
 </script>
 
 

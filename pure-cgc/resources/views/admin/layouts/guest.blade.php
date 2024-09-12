@@ -44,42 +44,42 @@
 
 <body id="kt_body" class="login-page">
     <!--
-    {{--  <div class="d-flex flex-column flex-root" >
+    <div class="d-flex flex-column flex-root" >
 
-        <div class="bg-white login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid" id="kt_login"  style="background-color:#F7F3F3 !important;">
+        {{--  <div class="bg-white login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid" id="kt_login"  style="background-color:#F7F3F3 !important;">
 
             <div class="login-aside d-flex flex-column flex-row-auto" style="background-color:#F73E1D;">
 
-
+  
                 <div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-x-center" style="background-image: url({{ url('admin/media/login.png')}});background-size: cover;"></div>
-
+     
             </div>
 
             <div class="mx-auto overflow-hidden login-content flex-row-fluid d-flex flex-column justify-content-center position-relative p-7" >
-
+      
                     <a  class="pt-2 text-center">
                         <img src="" class="max-h-150px" alt="" />
                     </a>
 
                     <div class="d-flex flex-column-fluid flex-center">
 
-
+    
                     <div class="login-form login-signin" >
                             -->
 
                                 {{ $slot }}
                                 <!--
                     </div>
-
-
+				
+           
                 </div>
-
+ 
 
             </div>
+   
+        </div>  --}}
 
-        </div>
-
-    </div>  --}}
+    </div>
 -->
     <script>
         var HOST_URL = "";

@@ -63,7 +63,7 @@ class Invitations extends Component
             'send_time' => 'required|date_format:H:i',
             // 'resend_date' => 'required|date',
             // 'resend_time' => 'required|date_format:H:i',
-            'send_to' => 'required',
+            'selectedItems' => 'required',
             'schedule_invitation' => 'boolean',
             'send_now' => 'boolean',
             'send_by_email' => 'boolean',
@@ -95,7 +95,7 @@ class Invitations extends Component
             'resend_date.date' => 'The resend date is not a valid date.',
             'resend_time.date_format' => 'The resend time must be in the format HH:MM.',
             'send_to.string' => 'The send to field must be a string.',
-            'send_to.required' => 'The send to field is required.',
+            'selectedItems.required' => 'The send to field is required.',
             'schedule_invitation.boolean' => 'The schedule invitation field must be true or false.',
             'send_now.boolean' => 'The send now field must be true or false.',
             'send_by_email.boolean' => 'The send by email field must be true or false.',
@@ -107,10 +107,8 @@ class Invitations extends Component
         // dd($this->selectedItems);
 
         $this->validate();
-
-        // $this->reset();
+// dd('');
         $this->show=2;
-        // dd( $this->invitation_id);
     }
     public function creation()
     {
@@ -134,45 +132,24 @@ class Invitations extends Component
         $data->send_now = $this->send_now;
         $data->send_by_email = $this->send_by_email;
         $data->send_by_whatsapp = $this->send_by_whatsapp;
-        // $data->save();
 
-    // dd($data->id);
-        // dd( $this->invitation_id);
-
-        // $this->validate();
-            // Retrieve the invitation by ID
-            // $data = Invitation::find($this->invitation_id);
-                // Update the subject and img fields
                 $data->subject = $this->subject;
 
                 if($this->img)
                 {
-                    // dd($this->img);
                     $img=$this->img;
                     $file_name = date('Y_m_d_h_i_s_').Str::slug( $data->event_title).'.'.$img->getClientOriginalExtension();
                     $file_sml_name_img = 'thumbnail_'.$file_name;
                     $destinationPath = public_path('/uploads');
                     $destinationPath_smll = public_path('/uploads/thumbnail');
-                    // to finally create image instances
-                    //$image = $manager->make($destinationPath."/".$file_name);
+
                     $image_data = Image::make($img->getRealPath());
-                    // now you are able to resize the instance
                     $image_data->resize(1024,768);
-                    // and insert a watermark for example
-                    //$waterMarkUrl = public_path('uploads/logo.png');
-                    //$image_data->insert($waterMarkUrl, 'bottom-right', 5, 5);
-                    // finally we save the image as a new file
+
                     $img_name = $image_data->save($destinationPath."/".$file_name);
-                    ///small img
                     $image_small_data = Image::make($img->getRealPath());
-                    // now you are able to resize the instance
                     $image_small_data->resize(250,190);
-                    // and insert a watermark for example
-                    //$waterMarkUrl = public_path('uploads/logo.png');
-                    //$image_small_data->insert($waterMarkUrl, 'bottom-right', 2, 2);
-                    // finally we save the image as a new file
                     $img_sml_name = $image_small_data->save($destinationPath_smll."/".$file_sml_name_img);
-                    // exit create img
                     if(is_null($data->img)==0)
                     {
                         @unlink("./uploads/".$data->img);
@@ -183,7 +160,6 @@ class Invitations extends Component
                     }
                     $data->img = $file_name;
                 }
-                // Save the updated record
                 $data->save();
                 $this->invitation_id=$data->id;
 

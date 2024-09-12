@@ -29,7 +29,7 @@
                     <div class="modal-footer justify-content-center">
                         <button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal"
                             aria-label="Close">Cancel</button>
-                        <button wire:click="deleteModerator" type="button" class="btn btn-danger">Delete</button>
+                        <button wire:click="deleteModerator" data-bs-dismiss="modal" type="button" class="btn btn-danger">Delete</button>
                     </div>
 
 
@@ -51,7 +51,7 @@
             <div class="container-fluid">
                 @if ($showForm == false)
                 <div class="row">
-                    <div class="p-0 pb-2 mb-2 card-header d-sm-flex d-block">
+                    <div class="m-auto col-md-8 mb-4 text-center">
 
                         <button wire:click="active_edit('0')" class="btn btn-primary w100 new-group">Add new
                             moderator</button>

@@ -87,8 +87,8 @@
 
 
                             <div class="col-lg-4 col-12">
-                                <div class="card shadow-none rounded-0 bg-transparent h-auto mb-0">
-                                    <div class="card-body text-center event-calender pb-2 p-0">
+                                <div class="h-auto mb-0 bg-transparent shadow-none card rounded-0">
+                                    <div class="p-0 pb-2 text-center card-body event-calender">
 
 
                                         <div wire:ignore class="calendar-detr">
@@ -142,8 +142,14 @@
                                         <h5 class="mb-0 text-black">Date</h5>
                                         <?php
                                 // Assuming $nextEvent->event_date contains the date
-                                $date = new DateTime($nextEvent->event_date);
-                                $formattedDate = $date->format('l ( d/m/Y )');
+                                if ($nextEvent) {
+                                    $date = new DateTime($nextEvent->event_date);
+                                    $formattedDate = $date->format('l ( d/m/Y )');
+                                } else {
+                                    // Handle the case when there is no next event
+                                    $formattedDate = 'No upcoming events';
+                                }
+
                                 ?>
                                         <p class="mb-0">{{ $formattedDate }}</p>
                                     </div>

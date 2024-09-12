@@ -26,7 +26,7 @@
                                 <a class="nav-link  @if ($show==2)
     active
     @endif " aria-expanded="false">
-                                    <span class="numer-tab">2</span>creat</a>
+                                    <span class="numer-tab">2</span>create</a>
                             </li>
 
                             <li class="nav-item">

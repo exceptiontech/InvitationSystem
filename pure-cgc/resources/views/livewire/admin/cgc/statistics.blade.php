@@ -123,7 +123,7 @@
                                     </div>
                                     <ul class="chart-point-list">
                                         @foreach($typeLabels as $index => $label)
-                                        <li class="te-color-{{ $index + 1 }}"><i class="fa fa-circle me-1"></i> {{ $label }}
+                                        <li class="te-color-{{ $index + 1 }}"><i class="fa fa-circle me-1"></i> <p>{{ $label }}</p>
                                             <span>{{ $typePercentages[$index] }}%</span></li>
                                         @endforeach
                                     </ul>
